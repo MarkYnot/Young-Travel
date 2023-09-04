@@ -10,6 +10,15 @@
   box-sizing: border-box;
 }
 
+@keyframes button-animation {
+  25% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+}
+
 body {
   max-width: 3000px;
   margin: 0 auto;
@@ -373,9 +382,143 @@ body {
 }
 
 .Apply:hover {
-  background-color: white;
-  transform: translateY(-30%);
-  transition: 0.8s all ease;
+  animation-name: button-animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.backgroundCover {
+  background-image: url("https://www.awardmortgage.com.au/wp-content/uploads/2019/10/20191031163749.jpg");
+  background-size: auto;
+  z-index: 50;
+}
+
+@media screen and (min-width: 1025px) {
+  .backgroundCover {
+    background-attachment: fixed;
+  }
+}
+
+.backgroundCover p::selection {
+  background-color: var(--secondary-color);
+}
+
+.backgroundCover p::-moz-selection {
+  background-color: var(--secondary-color);
+}
+
+.backgroundCover p::-webkit-selection {
+  background-color: var(--secondary-color);
+}
+
+.backgroundCover .coverShadow-layout {
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 100;
+}
+
+.backgroundCover .elementor-container {
+  min-height: 800px;
+  padding: 20px;
+  z-index: 200;
+  color: var(--primary-color);
+  font-family: Ubuntu, 方正黑体简体, "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.backgroundCover .elementor-container .travelName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: 900;
+  margin-top: 5rem;
+}
+
+.backgroundCover .elementor-container .travelIntroduction {
+  margin: 0 25%;
+}
+
+.backgroundCover .elementor-container .travelIntroduction p {
+  line-height: 2rem;
+  font-weight: 100;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.backgroundCover .elementor-container .travelIntroduction p ::selection {
+  background-color: var(--secondary-color);
+}
+
+.backgroundCover .elementor-container .travelIntroduction p ::-moz-selection {
+  background-color: var(--secondary-color);
+}
+
+.backgroundCover .elementor-container .travelIntroduction p ::-webkit-selection {
+  background-color: var(--secondary-color);
+}
+
+.backgroundCover .elementor-container .travelIntroduction :not(:first-child) {
+  margin-top: 2rem;
+}
+
+.backgroundCover .travelIntroStatics-section {
+  width: 100%;
+}
+
+.backgroundCover .travelIntroStatics-section .statics-container {
+  max-width: 80%;
+  margin: 0 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backgroundCover .travelIntroStatics-section .statics-container .statics {
+  display: flex;
+  flex-direction: column;
+}
+
+.backgroundCover .travelIntroStatics-section .statics-container .statics .first {
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  font-size: 4rem;
+  margin: 0.5rem auto !important;
+}
+
+.backgroundCover .travelIntroStatics-section .statics-container .statics .last {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto !important;
+}
+
+.backgroundCover .findButton {
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 15px 80px;
+  text-transform: uppercase;
+  background-color: var(--secondary-color);
+  margin: 6rem 0;
+  cursor: pointer;
+  position: relative;
+  left: 45%;
+}
+
+.backgroundCover .findButton:hover {
+  animation-name: button-animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.cover-section {
+  position: relative;
 }
 
 .red {
