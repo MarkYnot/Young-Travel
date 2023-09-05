@@ -25,6 +25,11 @@ $colorBlack: black;
   animation-iteration-count: infinite;
 }
 
+@mixin session-width{
+  width: 100%;
+}
+
+
 @keyframes button-animation {
   25%{
     transform: scale(1.1);
@@ -538,54 +543,57 @@ body {
     }
  }
 
- .serviceDescription{
-   width: 85%;
-  //  margin-top: 3.5rem;
-   margin: 3.5rem auto;
-
-
-   p{
-      font-size: 45px;
-      font-weight: 900;
-      @include flex-centre();
-   }
-
-   span{
-    text-align: left;
-    @include flex-centre();
-    font-weight: 400;
-    font-size: 1.2rem;
-   }
- }
-
- .serviceBar{
-  width: 50%;
-  //  margin-top: 3.5rem;
-   margin: 3.5rem auto;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   flex-wrap: wrap;
-   align-content: space-between;
- }
-
- .serviceOption{
-        position: relative;
-        display:inline-block;
-        margin: 2rem;
-        max-width: 250px;
+ .service-section{
+  @include session-width();
+  margin-top: 10rem;
+    .serviceDescription{
+      max-width: 85%;
+    //  margin-top: 3.5rem;
+      margin: 8rem auto 3.5rem auto;
+  
+  
+        p{
+          font-size: 45px;
+          font-weight: 900;
+          @include flex-centre();
+        }
     
+        span{
+        text-align: left;
+        @include flex-centre();
+        font-weight: 400;
+        font-size: 1.2rem;
+        }
+    }
+
+    .serviceBar{
+      max-width: 1000px;
+      //  margin-top: 3.5rem;
+      margin: 3.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    .serviceOption{
+      position: relative;
+      display:inline-block;
+      margin: 2rem;
+      max-width: 250px;
+
       a{
         text-decoration:none;
         color:rgb(54, 54, 54);
-   
+
       }
 
       img{
         filter: brightness( 60% ) contrast( 100% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
         transition-duration: 0.5s;
         border-radius: 25px 25px 25px 25px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        box-shadow: rgb(54, 54, 54) 0px 0px 10px;
         width: 100%;
         &:hover{
           filter: brightness( 100% ) contrast( 100% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
@@ -603,41 +611,416 @@ body {
       }
 
       .caption-position{
-         position: absolute;
-         top: 37%;
-         left: 50%;
-         transform: translateX(-50%);
-         text-align: center;
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
       }
- }
+   } 
 
- .InfoButton{
-  border-radius: 10px;
-  border: none;
-  font-weight:  600;
-  font-size: 1.5rem;
-  padding: 20px 30px;
-  text-transform: uppercase;
-  background-color: var(--secondary-color);
-  margin: 6rem 0;
-  cursor: pointer;
-  position: relative;
-  left: 45%;
-  &:hover{
-    @include button-animation();
-  }
- }
+   .InfoButton{
+    border-radius: 10px;
+    border: none;
+    font-weight:  200;
+    color:var(--primary-color);
+    font-size: 1.5rem;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    background-color: var(--secondary-color);
+    margin: 6rem 0;
+    cursor: pointer;
+    position: relative;
+    left: 45%;
+    &:hover{
+      @include button-animation();
+    }
+   }
+}
+
+
+
+
+
+
+
 
 
  .cover-section{
+   position: relative;
+ }
+    
+.red{
+   color:var(--secondary-color);
+}
+
+.expert{
+   width: 100%;
+   font-family: "Libre Franklin", Arial, "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif !important;
+
+    .expertContainer{
+      width: 100%;
+      background-color: var(--secondary-color);
+      min-height: 250px;
+    
+
+      .expert-content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto 3rem auto;
+  
+        max-width: 70%;
+      }
+
+      p{
+        font-weight: 900;
+        font-size: 4rem;
+      }
+
+      .contactDetail{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .talkToUs{
+          border-radius: 10px;
+          border: none;
+          color: var(--secondary-color);
+          font-weight:  600;
+          font-size: 1.5rem;
+          padding: 1.5rem 2.5rem;
+          text-transform: uppercase;
+          background-color: black;
+          margin: 1rem 0;
+          margin-top: 3rem !important;
+
+          &:hover{
+            @include button-animation();
+          }
+        }
+
+        span{
+          margin: 0.5rem 0;
+          font-weight: 600;
+          font-size: 2.5rem;
+          text-align: center;
+        }
+
+        .bi{
+          margin-right:8px;
+        }
+      }
+    }
+}
+
+.whyTravel{
+  @include session-width();
+  background-color: #f2f2f2;
+  min-height: 1400px;
+  font-family: "Libre Franklin", Arial, "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif !important;
+
+  .travelReason{
+     max-width: 80%;
+     margin: 0 auto;
+     padding-top: 120px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+
+     p{
+      font-size: 45px;
+      font-weight: 600;
+      text-transform: capitalize;
+     }
+
+     span{
+      text-align: left;
+      font-size: 30px;
+      font-weight: 400;
+     }
+
+     iframe{
+      margin-top: 3rem;
+      box-shadow: rgb(54, 54, 54) 0px 0px 10px;
+     }
+  }
+}
+
+
+.steps-to-find{
+  @include session-width();
+  background-color: var(--primary-color);
+  min-height: 950px;
+
+  .step-container{
+    max-width: 85%;
+    //  margin-top: 3.5rem;
+    margin: 8rem auto 3.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .steps-title{
+      font-size: 45px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    .stepItem-list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stepItem{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 4rem;
+
+      img{
+        width: 350px;
+        height: auto;
+      }
+
+      .item-description{
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: capitalize;
+        color:var(--grey-color);
+        font-family: "Libre Franklin", Arial, "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif !important;
+      }
+    }
+
+    button{
+      border-radius: 10px;
+      border: none;
+      font-weight:  200;
+      color:var(--primary-color);
+      font-size: 1.5rem;
+      padding: 20px 30px;
+      text-transform: uppercase;
+      background-color: var(--secondary-color);
+      margin: 6rem 0;
+      cursor: pointer;
+      &:hover{
+        @include button-animation();
+      }
+    }
+
+  }
+}
+
+.contactForm{
+  @include session-width();
+
+
+  .formContainer{
     position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+
+  .up-section{
+    grid-row: 1/2;
+    background-color: var(--secondary-color);
+    min-height: 500px;
+    z-index: 1;
+  }
+
+
+  .down-section{
+    grid-row: 2/3;
+    min-height: 500px;
+    z-index: 1;
+  }
+
+
+  .form-to-contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-row: 1/3;
+    background-color: var(--primary-color);
+    z-index: 100;
+    min-height: 800px;
+    min-width: 60%;
+    box-shadow: rgb(54, 54, 54) 0px 0px 10px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 20% 1fr;
+
+    .form-contact-us{
+      grid-column: 1/3;
+      grid-row: 1;
+      text-align: center;
+      text-decoration: underline;
+      font-size:2.5rem;
+      font-weight: 200;
+      color: var(--secondary-color);
+      text-decoration-color: var(--secondary-color); /* 控制下划线颜色 */
+      // text-decoration-thickness: 10px; /* 控制下划线厚度 */
+      text-underline-offset: 25px;
+    }
+
+
+    @mixin flex-column{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .left-section{
+      width: 80%;
+      grid-column: 1/2;
+      grid-row: 2;
+      margin: 0 auto;
+      // @include flex-column();
+
+      h1{
+        font-size: 2.5rem;
+      }
+
+  
+      .contact-list{
+        list-style-type: none;
+        padding:0;
+
+        & li{
+          margin: 1.6rem 0;
+          display: flex;
+          justify-content: flex-start;
+
+          .bi-telephone-fill{
+            color: var(--secondary-color);
+          }
+
+          .bi-envelope-fill{
+            color: var(--secondary-color);
+          }
+ 
+          .bi-geo-alt-fill{
+            color: var(--secondary-color);
+          }
+
+          
+           & span{  
+              font-size: 1.6rem;
+              color:var(--grey-color);
+              margin-left:20px;
+              text-align: left;
+             
+           }
+        }
+      }
+
+     
+      
+    }
+
+    .right-section{
+      grid-column: 2/3;
+      grid-row: 2;
+      // @include flex-column();
+      .contactForm{
+        list-style-type: none;
+        padding:0;
+
+        & li{
+          margin: 1.6rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+        span{
+          font-size: 1.5rem;
+          color:rgb(102, 99, 99);
+        }
+
+        .text-input{
+          margin-top: 3px;
+          padding:0;
+          width:80%;
+          height: 40px;
+          border-radius: 10px;
+          border: none;
+          background-color: #d6d4d47a;
+          font-size: 20px;
+          color: black;
+          &:focus{
+            outline: none;
+          }
+        }
+
+        .mySelect{
+          margin-top: 3px;
+          padding:0;
+          width:80%;
+          height: 40px;
+          border-radius: 10px;
+          border: none;
+          background-color: #d6d4d47a;
+          font-size: 20px;
+          color: black;
+          &:focus{
+            outline: none;
+          }
+        }
+        
+        .equiry{
+          margin-top: 3px;
+          padding:0;
+          width:80%;
+          height: 120px;
+          border-radius: 10px;
+          border: none;
+          background-color: #d6d4d47a;
+          font-size: 20px;
+          color: black;
+          &:focus{
+            outline: none;
+          }
+        }
+       }
+
+
+     }
+
+     button{
+        border-radius: 10px;
+        border: none;
+        font-weight:  600;
+        font-size: 1.5rem;
+        padding: 15px 180px;
+        text-transform: uppercase;
+        background-color: var(--secondary-color);
+        cursor: pointer;
+        color: var(--primary-color);
+
+
+        &:hover{
+          @include button-animation();
+        }
+      
+    }
+  }
+
+
  }
 
+}
 
-      
-.red{
-     color:var(--secondary-color);
-  }
 
 
 
