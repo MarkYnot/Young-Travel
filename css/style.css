@@ -890,6 +890,12 @@ body {
   grid-row: 2;
 }
 
+.contactForm .form-to-contact .right-section .right-title {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .contactForm .form-to-contact .right-section .contactForm {
   list-style-type: none;
   padding: 0;
@@ -961,7 +967,7 @@ body {
   border: none;
   font-weight: 600;
   font-size: 1.5rem;
-  padding: 15px 180px;
+  padding: 15px 4em;
   text-transform: uppercase;
   background-color: var(--secondary-color);
   cursor: pointer;
