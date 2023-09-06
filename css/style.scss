@@ -70,7 +70,7 @@ body {
     .site-logo{
       position: relative;
       float: left;
-      // width:calc(40% -15rem);
+      margin-top: 1.5rem;
       cursor: pointer;
        & a{
         text-decoration: none;
@@ -1026,6 +1026,78 @@ body {
 
  }
 
+}
+
+.footer{
+  @include session-width();
+  background-color: black;
+
+
+  .footer-area{
+    min-height:400px;
+    max-width: 100%;
+    // margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 70% 30%;
+
+
+    .logo-layer{
+
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      img{
+        border: 0;
+        max-width: 300px;
+        margin: 2rem 0px;
+      }
+    }
+
+    .footerBar{
+      grid-column: 2/3;
+      grid-row: 1;
+      width: 80%;
+      margin: 3rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+       a{
+        color: #FFF;
+        text-decoration: none;
+
+         span{
+          font-size: 1.8rem;
+         }
+       }
+    }
+
+    .abn{
+    grid-column: 1/3;
+    grid-row: 2;
+      p{
+        font-weight: 200;
+        font-size:20px;
+        color:var(--secondary-color);
+        text-align: center;
+        // line-height: 20px;
+        
+      }
+
+      .abn1{
+        margin: 2rem auto 5px auto;
+      }
+
+      .abn2{
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 
