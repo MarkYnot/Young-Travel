@@ -1,7 +1,7 @@
 @charset "UTF-8";
 :root {
   font-size: 16px;
-  --secondary-color: #ff0000;
+  --secondary-color: #EC0024;
   --primary-color: white;
   --grey-color: #a09a9a;
   --maxWidth: 100%;
@@ -131,6 +131,7 @@ body {
   margin: 3rem auto 10rem auto;
   position: relative;
   left: 45%;
+  cursor: pointer;
 }
 
 .showMore:hover {

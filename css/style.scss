@@ -2,7 +2,7 @@ $colorBlack: black;
 
 :root {
   font-size: 16px;
-  --secondary-color: #ff0000;
+  --secondary-color: #EC0024;
   --primary-color: white;
   --grey-color: rgb(160, 154, 154);
   --maxWidth: 100%;
@@ -223,7 +223,7 @@ body {
 
 .video-container-overlay{
   height: 40rem;
-  // border: 1px solid #ff0000;
+  // border: 1px solid #EC0024;
   display: grid;
   grid-template-columns: repeat(5,1fr);
   grid-template-rows: repeat(2,1fr);
