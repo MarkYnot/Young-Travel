@@ -1,25 +1,4 @@
 @charset "UTF-8";
-:root {
-  font-size: 16px;
-  --secondary-color: #EC0024;
-  --primary-color: white;
-  --grey-color: #a09a9a;
-  --maxWidth: 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@keyframes button-animation {
-  25% {
-    transform: scale(1.1);
-  }
-  75% {
-    transform: scale(0.9);
-  }
-}
-
 .header-section {
   max-width: 3000px;
   width: 100%;

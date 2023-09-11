@@ -52,192 +52,6 @@ body {
   width: 100%;
 }
 
-.contact-image-section{
-  //  min-height: 1000px;
-  margin: 0;
-  margin-top: 6rem;
-  width: 100%;
-  height: 37.5rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: $colorwht;
-
-  .contact-image-container{
-    z-index: 1;
-    margin: 0 10rem 10rem 0;
- 
-  }
-
-
-  & h2 {
-    color: white;
-    font-size: 3.5rem;
-    margin: 0;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    text-transform: capitalize;
-
-      & span{
-        color: var(--secondary-color);
-      }
-  }
-
-  &::before{
-    background-color: rgba(0, 0, 0, 0.53);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    // bottom: 0;
-    content: "";
-    z-index: 0;
-  }
-   
-}
-
-.contact-pictureLink{
-  background-image: url(https://awardmortgage.com.au/wp-content/uploads/2019/11/20191126100751.jpg);
-}
-
-.contactSection{
-  @include session-width();
-
-   .contactsContainer{
-    width: 75%;
-    margin: 10rem auto;
-    min-height: 500px;
-    font-size: "Libre Franklin", Arial, "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif !important;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-
-    .title{
-      font-size: 2.5rem;
-      font-weight: 600;
-      color:var(--secondary-color);
-      text-decoration: underline;
-      text-underline-offset: 30px;
-      font-size: "Libre Franklin", Arial, "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif !important;
-      text-align: center;
-    }
-
-    .contact{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin: 4rem 0;
-
-      iframe{
-        box-shadow: #363636 0px 0px 10px;
-      }
-
-      .contactType{
-        font-size: 2.5rem;
-        font-weight: 600;
-        position: relative;
-
-        &::after{
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 5px; /* 你可以调整这个值来控制“宽度” */
-          background-color: var(--secondary-color);
-          width: 60%;
-        }
-      }
-
-      .address{
-        font-size: 1.7rem;
-        font-weight: 200;
-        // margin-top: rem;
-      }
-
-      .contact-table{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        // border:1px solid #ccc;
-        border-collapse: collapse;
-        margin-top: 1rem;
-      
-        .tableSorter{
-         width: 100%; 
-        //  margin: 0 auto;
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         grid-template-rows: 1fr 2fr;
-         min-height: 15rem; 
-      
-      
-          .table-header{
-            // background-color: var(--secondary-color);
-          }
-      
-          .spanStyle{
-            text-align: center;
-            @include flex-centre();
-            color: $colorBlack;
-            font-size: 1.5rem;
-            font-weight: 600;
-            font-family: Ubuntu, 方正黑体简体, "Open Sans", Helvetica, Arial, sans-serif;;
-          }
-      
-          .grid-item-1{
-            //  border-top-left-radius: 2rem;
-             grid-column: 1;
-             grid-row: 1;
-          }
-      
-          .grid-item-2{
-            //  border-top-right-radius: 2rem;
-              grid-column: 2;
-             grid-row: 1;
-          }
-      
-          .grid-item-3{
-            grid-column: 1;
-            grid-row: 2;
-         }
-      
-         .grid-item-4{
-            grid-column: 2;
-            grid-row: 2;
-         }
-      
-         .spanStyle-body{
-          color: var(--primary-color);
-          font-size: 1.5rem;
-          font-weight: 300;
-          font-family: Ubuntu, 方正黑体简体, "Open Sans", Helvetica, Arial, sans-serif;;
-        }
-      
-          .table-body{
-            background-color: var(--secondary-color);
-            @include flex-centre();
-            max-height: 5rem;
-
-          }
-       }
-      
-      }
-
-    }
-  }
-}
-
-
-
 
 .contactForm{
   @include session-width();
@@ -449,4 +263,89 @@ body {
 
  }
 
+}
+
+
+.background-section{
+  //  min-height: 1000px;
+  margin: 0;
+  margin-top: 5rem;
+  width: 100%;
+  height: 37.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: $colorwht;
+
+  .image-container{
+    z-index: 1;
+    margin: 0 10rem 10rem 0;
+ 
+  }
+
+  & h1 {
+    font-weight: 1000;
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    margin: 0.8rem 0;
+  }
+  & h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+
+      & span{
+        color: var(--secondary-color);
+      }
+  }
+  & p {
+    width: 50%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.1em;
+  }
+
+  &::before{
+    background-color: rgba(0, 0, 0, 0.53);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    // bottom: 0;
+    content: "";
+    z-index: 0;
+  }
+   
+}
+
+.backgroundLink{
+  background-image: url(https://awardmortgage.com.au/wp-content/uploads/2019/11/20191120141324.jpg);
+}
+
+
+.Aboutus {
+  width: 70%;
+  font-size: 1.5rem;
+  padding: 2rem;
+  color: var(--grey-color);
+  margin: auto;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  // border-bottom: 1px solid var(--grey-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & span{
+    text-align: left !important;
+  }
 }
