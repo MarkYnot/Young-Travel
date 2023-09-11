@@ -446,6 +446,16 @@ body {
   width: 80%;
 }
 
+.advertisement h2 {
+  font-size: 1.8rem;
+  color: #4a0812;
+}
+
+.advertisement h1 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
 .advertisement .advertisement-content {
   width: 100%;
   display: grid;
@@ -454,12 +464,24 @@ body {
   column-gap: 20px;
 }
 
+.advertisement .advertisement-content h3 {
+  font-size: 1.5rem;
+  color: #4a0812;
+}
+
+.advertisement .advertisement-content p {
+  font-size: 1.2rem;
+  color: darkgray;
+}
+
 .advertisement .advertisement-content .content-1 {
+  max-width: 85%;
   grid-row: 1/3;
   grid-column: 1/2;
 }
 
 .advertisement .advertisement-content .content-2 {
+  max-width: 85%;
   grid-row: 1/3;
   grid-column: 2/3;
 }
