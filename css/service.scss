@@ -1,0 +1,586 @@
+$colorBlack: black;
+$colorwht: white;
+
+:root {
+  font-size: 16px;
+  --secondary-color: #EC0024;
+  --primary-color: white;
+  --grey-color: rgb(160, 154, 154);
+  --maxWidth: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin flex-centre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-animation{
+  animation-name: button-animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@mixin session-width{
+  width: 100%;
+}
+
+
+@keyframes button-animation {
+  25%{
+    transform: scale(1.1);
+  }
+
+  75%{
+    transform: scale(0.9);
+  }
+}
+
+body {
+  max-width: 3000px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: barlow, sans-serif;
+}
+
+.mainSection{
+  width: 100%;
+}
+
+.service-image-section{
+  //  min-height: 1000px;
+  margin: 0;
+  margin-top: 5rem;
+  width: 100%;
+  height: 37.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $colorwht;
+
+  .service-image-container{
+    z-index: 1;
+    // margin: 0 10rem 10rem 0;
+  }
+  & h1 {
+    font-weight: 1200;
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    z-index: 1;
+    margin: 4rem 0;
+  }
+
+  & h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+    // font-weight: 400;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    z-index: 1;
+  }
+
+  & p {
+    width: 20%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.1em;
+    z-index: 1;
+  }
+
+  & span{
+    color: var(--secondary-color);
+  }
+
+  &::before{
+    background-color: rgba(0, 0, 0, 0.53);
+    width: 100%;
+    height: 37.5rem;
+    position: absolute;
+    left: 0;
+    // bottom: 0;
+    content: "";
+    z-index: 0;
+  }
+   
+}
+
+.Button{
+  background: var(--secondary-color);
+  color: white;
+  width: 20rem;
+  height: 5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  z-index: 1;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.service-pictureLink{
+  background-image: url(https://awardmortgage.com.au/wp-content/uploads/2019/11/20191128101949.jpg);
+}
+
+.services-intro{
+  margin: 6rem auto;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+
+    & h2{
+      font-size: 1.8rem;
+      color: #4a0812;
+    }
+
+    & h1{
+      font-size: 2rem;
+      color: var(--secondary-color);
+    }
+
+  .advertisement-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 4fr;
+    column-gap: 20px;
+
+    & h3{
+      font-size: 1.5rem;
+      color: #4a0812;
+    }
+
+    & p{
+      font-size: 1.2rem;
+      color: darkgray;
+    }
+
+    .content-1{
+      max-width: 85%;
+      grid-row: 1/3;
+      grid-column: 1/2;
+    }
+
+    .content-2{
+      max-width: 85%;
+      grid-row: 1/3;
+      grid-column: 2/3;
+    }
+    
+  }
+}
+
+
+.contactForm{
+  @include session-width();
+
+
+  .formContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2,1fr);
+  }
+
+
+  .up-section{
+    grid-row: 1/2;
+    background-color: var(--secondary-color);
+    min-height: 500px;
+    z-index: 1;
+  }
+
+
+  .down-section{
+    grid-row: 2/3;
+    min-height: 500px;
+    z-index: 1;
+  }
+
+
+  .form-to-contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-row: 1/3;
+    background-color: var(--primary-color);
+    z-index: 100;
+    min-height: 800px;
+    min-width: 60%;
+    box-shadow: rgb(54, 54, 54) 0px 0px 10px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 20% 1fr;
+
+    .form-contact-us{
+      grid-column: 1/3;
+      grid-row: 1;
+      text-align: center;
+      text-decoration: underline;
+      font-size:2.5rem;
+      font-weight: 200;
+      color: var(--secondary-color);
+      text-decoration-color: var(--secondary-color); /* 控制下划线颜色 */
+      // text-decoration-thickness: 10px; /* 控制下划线厚度 */
+      text-underline-offset: 25px;
+    }
+
+
+    @mixin flex-column{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .left-section{
+      width: 80%;
+      grid-column: 1/2;
+      grid-row: 2;
+      margin: 0 auto;
+      // @include flex-column();
+
+      h1{
+        font-size: 2.5rem;
+      }
+
+  
+      .contact-list{
+        list-style-type: none;
+        padding:0;
+
+        & li{
+          margin: 1.6rem 0;
+          display: flex;
+          justify-content: flex-start;
+
+          .bi-telephone-fill{
+            color: var(--secondary-color);
+          }
+
+          .bi-envelope-fill{
+            color: var(--secondary-color);
+          }
+ 
+          .bi-geo-alt-fill{
+            color: var(--secondary-color);
+          }
+
+          
+           & span{  
+              font-size: 1.6rem;
+              color:var(--grey-color);
+              margin-left:20px;
+              text-align: left;
+             
+           }
+        }
+      }
+
+     
+      
+    }
+
+    .right-section{
+      grid-column: 2/3;
+      grid-row: 2;
+      // @include flex-column();
+
+      .right-title{
+       color:var(--secondary-color);
+       font-size: 1.5rem;
+       font-weight: 600;
+      }
+
+      .contactForm{
+        list-style-type: none;
+        padding:0;
+
+        & li{
+          margin: 1.6rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+        span{
+          font-size: 1.5rem;
+          color:rgb(102, 99, 99);
+        }
+
+        .text-input{
+          margin-top: 3px;
+          padding:0;
+          width:80%;
+          height: 40px;
+          border-radius: 10px;
+          border: none;
+          background-color: #d6d4d47a;
+          font-size: 20px;
+          color: black;
+          &:focus{
+            outline: none;
+          }
+        }
+
+        .mySelect{
+          margin-top: 3px;
+          padding:0;
+          width:80%;
+          height: 40px;
+          border-radius: 10px;
+          border: none;
+          background-color: #d6d4d47a;
+          font-size: 20px;
+          color: black;
+          &:focus{
+            outline: none;
+          }
+        }
+        
+        .equiry{
+          margin-top: 3px;
+          padding:0;
+          width:80%;
+          height: 120px;
+          border-radius: 10px;
+          border: none;
+          background-color: #d6d4d47a;
+          font-size: 20px;
+          color: black;
+          &:focus{
+            outline: none;
+          }
+        }
+       }
+
+
+     }
+
+     button{
+        border-radius: 10px;
+        border: none;
+        font-weight:  600;
+        font-size: 1.5rem;
+        padding: 15px 4em;
+        text-transform: uppercase;
+        background-color: var(--secondary-color);
+        cursor: pointer;
+        color: var(--primary-color);
+
+
+        &:hover{
+          @include button-animation();
+        }
+      
+    }
+  }
+
+
+ }
+
+}
+
+.service-List{
+  @include session-width();
+  @include flex-centre();
+  min-height: 750px;
+  background-image: url("https://www.awardmortgage.com.au/wp-content/uploads/2019/11/20191111163746-min.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 50;
+  
+  @media screen and (min-width: 1025px){
+     background-attachment: fixed;
+   }
+
+   span{
+    &::selection{
+      background-color: var(--secondary-color);
+    }
+
+    &::-moz-selection{
+      background-color: var(--secondary-color);
+    }
+
+    &::-webkit-selection{
+      background-color: var(--secondary-color);
+    }  
+  }
+
+  .step-container{
+    width: 85%;
+    //  margin-top: 3.5rem;
+    margin: 3.5rem auto 10rem auto;
+
+
+    .steps-title{
+      font-size: 45px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    .stepItem-list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stepItem{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 4rem;
+
+      i{
+        font-size: 10rem;
+        color: var(--secondary-color)
+      }
+
+      .item-description{
+        font-weight: 600;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: capitalize;
+        color:var(--primary-color);
+        font-family: "Libre Franklin", Arial, "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif !important;
+      }
+
+      span{
+        text-align: start;
+        color:var(--primary-color);
+        padding: 10px 0px 10px 30px;
+        font-weight: 200;
+        line-height: 1.7rem;
+        font-size: 1.3rem;
+      }
+    }
+
+  }
+
+  .findButton{
+    // @include flex-centre();
+    border-radius: 10px;
+    border: none;
+    font-weight:  600;
+    font-size: 1.5rem;
+    padding: 15px 80px;
+    text-transform: uppercase;
+    background-color: var(--secondary-color);
+    margin: 6rem 0 3rem 0;
+    cursor: pointer;
+    position: relative;
+    left: 45%;
+
+    &:active,
+    &:hover {
+      color: var(--secondary-color);
+      background: var(--primary-color);
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+.AboutService {
+  width: 70%;
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin: 3rem auto 6rem auto;
+  
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  // border-bottom: 1px solid var(--grey-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & span{
+    text-align: left !important;
+    color: darkgray;
+  }
+}
+
+.service-red-description{
+  @include session-width();
+  background-color: var(--secondary-color);
+  min-height: 550px;
+  @include flex-centre();
+
+  .step-container{
+    width: 85%;
+    //  margin-top: 3.5rem;
+    margin: 3.5rem auto 10rem auto;
+
+
+    .steps-title{
+      font-size: 45px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    .stepItem-list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stepItem{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 4rem;
+
+      img{
+        width: 200px;
+        height: auto;
+      }
+
+      .item-description{
+        font-weight: 600;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: capitalize;
+        color:var(--primary-color);
+        font-family: "Libre Franklin", Arial, "Microsoft YaHei", 微软雅黑, STXihei, 华文细黑, SimSun, 宋体, Heiti, 黑体, sans-serif !important;
+      }
+
+      span{
+        text-align: start;
+        color:var(--primary-color);
+        padding: 10px 0px 10px 30px;
+        font-weight: 200;
+        line-height: 1.7rem;
+        font-size: 1.3rem;
+      }
+    }
+
+  }
+}
