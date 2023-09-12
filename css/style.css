@@ -578,7 +578,7 @@ body {
 
 .steps-to-find .step-container .stepItem-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -586,11 +586,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 4rem;
+  margin: 0 2rem;
 }
 
 .steps-to-find .step-container .stepItem img {
-  width: 350px;
+  width: 250px;
   height: auto;
 }
 
@@ -681,7 +681,8 @@ body {
   width: 80%;
   grid-column: 1/2;
   grid-row: 2;
-  margin: 0 auto;
+  margin: 1rem 2rem;
+  max-height: 80%;
 }
 
 .contactForm .form-to-contact .left-section h1 {
@@ -721,6 +722,8 @@ body {
 .contactForm .form-to-contact .right-section {
   grid-column: 2/3;
   grid-row: 2;
+  margin: 1rem 2rem;
+  max-height: 80%;
 }
 
 .contactForm .form-to-contact .right-section .right-title {
@@ -799,12 +802,14 @@ body {
   border-radius: 10px;
   border: none;
   font-weight: 600;
-  font-size: 1.5rem;
-  padding: 15px 4em;
+  font-size: 1.5vw;
+  width: 80%;
+  padding: 15px 4px;
   text-transform: uppercase;
   background-color: var(--secondary-color);
   cursor: pointer;
   color: var(--primary-color);
+  margin: 1rem 0;
 }
 
 .contactForm .form-to-contact .right-section button:hover {
