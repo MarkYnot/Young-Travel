@@ -29,8 +29,8 @@
   max-width: 100%;
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 70% 30%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .footer .footer-area .logo-layer {
@@ -68,15 +68,18 @@
 }
 
 .footer .footer-area .abn {
-  grid-column: 1/3;
+  grid-column: 2/3;
   grid-row: 2;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .footer .footer-area .abn p {
   font-weight: 200;
-  font-size: 20px;
+  font-size: 1rem;
   color: var(--secondary-color);
-  text-align: center;
 }
 
 .footer .footer-area .abn .abn1 {
@@ -85,4 +88,68 @@
 
 .footer .footer-area .abn .abn2 {
   margin: 0 auto;
+}
+
+.footer .footer-area .callUs {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  border-radius: 10px;
+  border: none;
+  font-weight: 200;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  padding: 20px 20px;
+  text-transform: uppercase;
+  background-color: var(--secondary-color);
+  margin: 9rem 5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1057px) {
+  .footer-area {
+    min-height: 100px !important;
+  }
+  .footer-area .footerBar a span {
+    font-size: 1rem !important;
+  }
+  .footer-area .abn p {
+    font-size: 0.7rem !important;
+  }
+  .footer-area .callUs {
+    margin: auto !important;
+    width: 80%;
+    height: 20%;
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .footer .footer-area {
+    grid-template-rows: 1fr 1fr 1fr !important;
+  }
+  body .footer .footer-area .abn {
+    grid-column: 1/4;
+    grid-row: 3;
+    width: 75%;
+    margin: 0 auto;
+  }
+  body .footer .footer-area .abn p {
+    text-align: center;
+  }
+  body .footer .footer-area .footerBar {
+    grid-row: 2;
+    flex-direction: column;
+    margin: 1rem 0;
+    grid-column: 1;
+  }
+  body .footer .footer-area .footerBar > :not(:nth-child(1)) {
+    margin-top: 0.5rem;
+  }
+  body .footer .footer-area .logo-layer {
+    grid-column: 1/4;
+  }
+  body .footer .footer-area .logo-layer img {
+    max-width: 80% !important;
+    margin: 2rem auto;
+  }
 }
