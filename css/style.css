@@ -817,17 +817,4 @@ section {
   .expert .expertContainer .expert-content .contactDetail span {
     font-size: 1.2rem;
   }
-  .contactForm .formContainer .form-to-contact {
-    width: 100%;
-  }
-  .contactForm .formContainer .form-to-contact .right-section {
-    width: 90% !important;
-  }
-  .contactForm .formContainer .form-to-contact .right-section .contactForm li .text-input {
-    width: 90%;
-  }
-  .contactForm .formContainer .form-to-contact .right-section button {
-    font-size: 1.2rem !important;
-    font-weight: 200 !important;
-  }
 }

@@ -285,3 +285,40 @@
   }
 
 }
+
+@media screen and (max-width: 768px) {
+
+.contactForm .formContainer .form-to-contact{
+  width: 100%;
+
+  .right-section {
+     width: 90% !important;
+     
+      button{
+        width: 90%;
+      }
+
+      .contactForm li {
+        .text-input{
+            width:90%;
+        }
+
+        .mySelect{
+          width: 90%;
+        }
+
+        .equiry{
+          width: 90%;
+        }
+      }
+
+      button{
+        font-size: 1.2rem !important;
+        font-weight: 200 !important;
+      }
+
+
+  }
+
+ }
+}
