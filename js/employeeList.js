@@ -5,8 +5,8 @@ const MEMBER_INFO = [
     name: "Richard Zhou",
     title: "Founder",
     avaUrl:
-      "https://jamieblogbucket.s3.ap-southeast-2.amazonaws.com/images/me.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/zihaochen-722795139/",
+      "https://st3.depositphotos.com/3431221/13621/v/450/depositphotos_136216036-stock-illustration-man-avatar-icon-hipster-character.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/junjie-lin-mark/",
     githubUrl: "https://github.com/JamieChen007",
     blogUrl: "https://marklin419.com",
     email:"richard@youngtravel.com.au"
