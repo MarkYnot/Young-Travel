@@ -21,7 +21,8 @@
 </head>
 
 <body>
-  <section class="header-section" role="header">
+  <header class="header-section" role="header">
+   
     <nav class="navbar fixed">
         <div class="container">
           <div class="site-logo">
@@ -30,15 +31,18 @@
               </a>
           </div>
 
+          <div class="navMobileBtn"><i class="fas fa-bars"></i></div>
           <nav class="barLink">
             <ul class="barLinkList">
-              <li class="barLinkListItem"><a href="../index.html">Home</a></li>
-              <li class="barLinkListItem"><a href="./service.html">Services</a></li>
-              <li class="barLinkListItem"><a href="./travel.html">News</a></li>
-              <li class="barLinkListItem chosen"><a href="">About</a></li>
-              <li class="barLinkListItem"><a href="./contact.html">Contact</a></li>
+              <li class="barLinkListItem "><a href="../index.html">Home</a></li>
+              <li class="barLinkListItem"><a href="../html/service.html">Services</a></li>
+              <li class="barLinkListItem "><a href="../html/travel.html">News</a></li>
+              <li class="barLinkListItem chosen"><a href="../html/about.html">About</a></li>
+              <li class="barLinkListItem"><a href="../html/contact.html">Contact</a></li>
               <li class="navDropdownListItem">
-                  <a class="navLanguage" href=""> <img src="../asset/au-flat.png" alt=""></a>
+       
+                  <a class="navLanguage" href=""><img src="../asset/au-flat.png" alt=""></a>
+    
                   <ul class="navDropdownList">
                     <li>
                       <a href="#">Chinese</a>
@@ -48,9 +52,17 @@
               </li>
             </ul>
           </nav>
+
       </div>
+
+
     </nav>
-</section>
+
+
+  </header>
+
+<div class="mobile-header-menu">
+</div>
 
 <main>
   <figure class="image-section pictureLink">
@@ -199,6 +211,6 @@
 <script src="../js/navDropdownList.js"></script>
 <script src="../js/employeeList.js"></script>
 <script src="../js/headerOpacity.js"></script>
-<!-- <script src="../js/showMore.js"></script> -->
+<script src="../js/mobileList.js"></script>
 </body>
 </html>

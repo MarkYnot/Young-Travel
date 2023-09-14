@@ -217,3 +217,81 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
+
+@media screen and (max-width: 1340px) {
+  .employee-list {
+    grid-template-columns: 100%;
+  }
+  .showMore {
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 827px) {
+  body .image-section .image-container {
+    margin: 0 6rem 10rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .image-section {
+    height: 26rem;
+  }
+  body .image-section .image-container {
+    margin: 0 0 6rem 0;
+  }
+  body .image-section .image-container h2 {
+    font-size: 1.8rem;
+  }
+  body .Aboutus {
+    padding: 0;
+    width: 90%;
+  }
+  body .Aboutus h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+  body .Aboutus span {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+  .employee-list {
+    width: 100%;
+    margin: 5rem auto;
+  }
+  .employee-list .teamMember {
+    height: 10rem;
+  }
+  .employee-list .teamMember .avatar {
+    width: 6rem;
+    height: auto;
+  }
+  .employee-list .teamMember .teamMemberInfo .teamMemberName {
+    font-size: 1.2rem;
+  }
+  .employee-list .teamMember .teamMemberInfo .teamMemberTitle {
+    font-size: 0.9rem;
+  }
+  .employee-list .teamMember .teamMemberInfo .teamMemberTitle::before {
+    font-size: 0.9rem;
+  }
+  .employee-list .teamMember .teamMemberInfo .teamMemberEmail {
+    font-size: 0.7rem;
+  }
+  .employee-list .teamMember .teamMemberInfo .teamMemberEmail::before {
+    font-size: 0.9rem;
+  }
+  .employee-list .teamMember .teamMemberInfo .teamMemberLinkedin,
+  .employee-list .teamMember .teamMemberInfo .teamMemberBlog,
+  .employee-list .teamMember .teamMemberInfo .teamMemberGithub {
+    font-size: 1.3rem;
+  }
+  .showMore {
+    font-size: 1rem;
+    padding: 1rem 1.9rem;
+    margin: 1rem auto 6rem auto;
+    left: 30%;
+  }
+}

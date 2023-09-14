@@ -237,5 +237,107 @@ body {
   }
 }
 
+@media screen and (max-width: 1340px) {
+  .employee-list{
+    grid-template-columns: 100%;
+    // width: 100%;
+  }
 
+  .showMore{
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 827px) {
+  body .image-section .image-container{
+    margin: 0 6rem 10rem 0;
+   }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  body .image-section {
+      height: 26rem;
+    .image-container {
+      margin: 0 0 6rem 0;
+  
+      h2{
+        font-size: 1.8rem;
+      }
+    }
+    
+  }
+
+ body .Aboutus{
+  padding: 0;
+  width: 90%;
+  
+   h1{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+   }
+
+   span{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+   }
+ }
+
+
+  .employee-list{
+     width: 100%;
+     margin: 5rem auto;
+    
+      .teamMember {
+        height: 10rem;
+        .avatar{
+          width: 6rem;
+          height: auto;
+        }
+    
+        .teamMemberInfo{
+          .teamMemberName{
+            font-size: 1.2rem;
+
+          }
+    
+          .teamMemberTitle{
+            font-size: 0.9rem;
+
+            &::before{
+              font-size: 0.9rem;
+            }
+          }
+    
+          .teamMemberEmail{
+            font-size: 0.7rem;
+
+            &::before{
+              font-size: 0.9rem;
+            }
+          }
+
+          .teamMemberLinkedin,
+          .teamMemberBlog,
+          .teamMemberGithub{
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+  }
+
+  .showMore{
+    font-size: 1rem;
+    padding: 1rem 1.9rem;
+    margin: 1rem auto 6rem auto;
+    left: 30%;
+  }
+
+
+
+}
 
